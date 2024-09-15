@@ -70,18 +70,10 @@ def navbar_icons() -> rx.Component:
                         rx.icon("menu", size=30)
                     ),
                     rx.menu.content(
-                        navbar_icons_menu_item(
-                            "Home", "home", "/#"
-                        ),
-                        navbar_icons_menu_item(
-                            "Pricing", "coins", "/#"
-                        ),
-                        navbar_icons_menu_item(
-                            "Contact", "mail", "/#"
-                        ),
-                        navbar_icons_menu_item(
-                            "Services", "layers", "/#"
-                        ),
+                        navbar_icons_menu_item("Home", "home", "/#"),
+                        navbar_icons_menu_item("Pricing", "coins", "/#"),
+                        navbar_icons_menu_item("Contact", "mail", "/#"),
+                        navbar_icons_menu_item("Services", "layers", "/#"),
                     ),
                     justify="end",
                 ),

@@ -14,16 +14,6 @@ import NextHead from "next/head"
 
 
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
 export function Toaster_6e90e5e87a1cac8c96c683214079bef3 () {
   const { resolvedColorMode } = useContext(ColorModeContext)
 
@@ -52,17 +42,30 @@ useEffect(() => {
   )
 }
 
-export function Iconbutton_126c1207e75571062288a84458b7ab68 () {
-  const { toggleColorMode } = useContext(ColorModeContext)
+export function Div_ac2a89ea84667d600a059f034bd91dfe () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
-  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
 
 
   return (
-    <RadixThemesIconButton css={{"padding": "6px", "position": "fixed", "top": "2rem", "right": "2rem", "background": "transparent", "color": "inherit", "zIndex": "20", "&:hover": {"cursor": "pointer"}}} onClick={on_click_9922dd3e837b9e087c86a2522c2c93f8}>
-  <Fragment_2e0e6a4a3aec4136eedf42fc142b7aae/>
-</RadixThemesIconButton>
+    <div css={{"position": "fixed", "width": "100vw", "height": "0"}} title={`Connection Error: ${(connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''}`}>
+  <Fragment_cf53a535ae2e610a113dd361eb6ac95b/>
+</div>
+  )
+}
+
+export function Link_7d0bb5237df999b20f279635c15c7e4d () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"&:hover": {"color": "var(--accent-8)"}}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://reflex.dev/docs/getting-started/introduction/`} passHref={true}>
+  <RadixThemesButton>
+  {`Check out our docs!`}
+</RadixThemesButton>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -86,17 +89,29 @@ export function Fragment_2e0e6a4a3aec4136eedf42fc142b7aae () {
   )
 }
 
-export function Div_ac2a89ea84667d600a059f034bd91dfe () {
+export function Iconbutton_126c1207e75571062288a84458b7ab68 () {
+  const { toggleColorMode } = useContext(ColorModeContext)
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
+  const on_click_9922dd3e837b9e087c86a2522c2c93f8 = useCallback(toggleColorMode, [addEvents, Event, toggleColorMode])
 
 
   return (
-    <div css={{"position": "fixed", "width": "100vw", "height": "0"}} title={`Connection Error: ${(connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''}`}>
-  <Fragment_cf53a535ae2e610a113dd361eb6ac95b/>
-</div>
+    <RadixThemesIconButton css={{"padding": "6px", "position": "fixed", "top": "2rem", "right": "2rem", "background": "transparent", "color": "inherit", "zIndex": "20", "&:hover": {"cursor": "pointer"}}} onClick={on_click_9922dd3e837b9e087c86a2522c2c93f8}>
+  <Fragment_2e0e6a4a3aec4136eedf42fc142b7aae/>
+</RadixThemesIconButton>
   )
 }
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
 
 export function Fragment_cf53a535ae2e610a113dd361eb6ac95b () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -113,21 +128,6 @@ export function Fragment_cf53a535ae2e610a113dd361eb6ac95b () {
   <Fragment/>
 )}
 </Fragment>
-  )
-}
-
-export function Link_7d0bb5237df999b20f279635c15c7e4d () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"&:hover": {"color": "var(--accent-8)"}}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://reflex.dev/docs/getting-started/introduction/`} passHref={true}>
-  <RadixThemesButton>
-  {`Check out our docs!`}
-</RadixThemesButton>
-</NextLink>
-</RadixThemesLink>
   )
 }
 
