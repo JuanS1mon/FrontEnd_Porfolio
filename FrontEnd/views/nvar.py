@@ -29,26 +29,21 @@ def navbar_icons() -> rx.Component:
         rx.desktop_only(
             rx.hstack(
                 rx.hstack(
-                    rx.image(
-                        src="/logo.jpg",
-                        width="2.25em",
-                        height="auto",
-                        border_radius="25%",
-                    ),
-                    rx.heading(
-                        "Reflex", size="7", weight="bold"
-                    ),
+                    rx.avatar(fallback="Juan Simon", color_scheme="cyan",size="4",radius ="large"),
+                   
+                    #rx.heading("", size="7", weight="bold"),, 
                     align_items="center",
                 ),
                 rx.hstack(
-                    navbar_icons_item("inicio", "Home", "/#"),
-                    navbar_icons_item("quien soy", "smile", "/#"),
-                    navbar_icons_item("Contact", "mail", "/#"),
-                    navbar_icons_item("Proyectos", "layers", "/#"),
+                    navbar_icons_item("quien soy", "smile", "/#quien soy"),
+                    navbar_icons_item("Proyectos", "layers", "/#proyectos"),
+                    navbar_icons_item("Contacto", "mail", "/#contacto"),
+                    
                     spacing="6",
                 ),
                 justify="between",
                 align_items="center",
+                id="navbar",
             ),
         ),
         rx.mobile_and_tablet(
@@ -70,10 +65,10 @@ def navbar_icons() -> rx.Component:
                         rx.icon("menu", size=30)
                     ),
                     rx.menu.content(
-                        navbar_icons_menu_item("Home", "home", "/#"),
-                        navbar_icons_menu_item("Pricing", "coins", "/#"),
-                        navbar_icons_menu_item("Contact", "mail", "/#"),
-                        navbar_icons_menu_item("Services", "layers", "/#"),
+                        navbar_icons_menu_item("quien soy", "smile", "/#quien soy"),
+                        navbar_icons_menu_item("Proyectos", "layers", "/#proyectos"),
+                        navbar_icons_menu_item("Contacto", "mail", "/#contacto"),
+                        
                     ),
                     justify="end",
                 ),
